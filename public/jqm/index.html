@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+<head>
+  <title>Event</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link href="../lib/css/jquery.mobile-1.3.0.css" rel="stylesheet">
+  <script src="../lib/js/jquery-1.9.1.js"></script>
+  <script src="jqm-setting.js"></script>
+  <script src="../lib/js/jquery.mobile-1.3.0.js"></script>
+</head>
+<body>
+<div data-role="page" id="index" data-add-back-btn="false">
+  <div data-role="header">
+    <h1>Event</h1>
+    <a href="#add" class="ui-btn-right" data-icon="plus">Add</a>
+  </div>
+  <div data-role="content">
+    <ul id="eventlist" data-role="listview" data-inset="true">
+      <li><a><h2>Title</h2><p>Content</p></a></li>
+      <li><a><h2>Title2</h2><p>Content2</p></a></li>
+    </ul>
+  </div>
+  <div data-role="footer" class="ui-bar" data-position="fixed">
+    <a href="#info-dialog" data-icon="info" data-rel="dialog">About</a>
+  </div>
+</div>
+<div data-role="page" id="add">
+  <div data-role="header">
+    <h1>Event Add</h1>
+    <a href="#add" class="ui-btn-right" data-icon="plus">Add</a>
+  </div>
+  <div data-role="content">
+    <div data-role="filedcontain">
+      <fieldset data-role="controlgroup">
+        <legend>Event</legend>
+        <input type="text" id="add-title" placeholder="Title"/>
+        <textarea id="add-content" placeholder="Content"></textarea>
+      </fieldset>
+    </div>
+  </div>
+  <div data-role="footer" class="ui-bar" data-position="fixed">
+    <a href="#" data-icon="check" id="save-addbtn">Save</a>
+  </div>
+</div>
+<div data-role="page" id="view">
+  <div data-role="header">
+    <h1>Event View</h1>
+    <a href="#add" class="ui-btn-right" data-icon="plus">Add</a>
+  </div>
+  <div data-role="content">
+    <div data-role="filedcontain">
+      <h2 id="view-title"></h2>
+      <p id="view-content"></p>
+    </div>
+  </div>
+  <div class="ui-bar" data-position="fixed" data-role="footer" data-role=
+    "controlgroup" data-type="horizontal">
+    <a href="#edit" data-icon="gear">Edit</a>
+    <a href="#confirm-dialog" data-icon="delete" data-rel="dialog">Delete</a>
+  </div>
+</div>
+<div data-role="page" id="edit">
+  <div data-role="header">
+    <h1>Event Edit</h1>
+    <a href="#add" class="ui-btn-right" data-icon="plus">Add</a>
+  </div>
+  <div data-role="content">
+    <div data-role="filedcontain">
+      <fieldset data-role="controlgroup">
+        <legend>Event</legend>
+        <input type="text" id="edit-title" placeholder="Title"/>
+        <textarea id="edit-content" placeholder="Content"></textarea>
+      </fieldset>
+    </div>
+  </div>
+  <div data-role="footer" class="ui-bar" data-position="fixed">
+    <a href="#" data-icon="check" id="save-editbtn">Save</a>
+  </div>
+</div>
+<div data-role="page" id="msg-dialog">
+  <div data-role="header">
+    <h1>Message</h1>
+  </div>
+  <div data-role="content">
+    <p id="message"></p>
+    <a data-role="button" href="#index">OK</a>
+  </div>
+</div>
+<div data-role="page" id="info-dialog">
+  <div data-role="header">
+    <h1>About</h1>
+  </div>
+  <div data-role="content">
+    This is a RESTful Event Application using Node.js, jQuery Mobile, MongoDB,
+    mongoose and express.
+  </div>
+</div>
+<div data-role="page" id="confirm-dialog">
+  <div data-role="header">
+    <h1>Confirm</h1>
+  </div>
+  <div data-role="content">
+    <p>Are you sure you want to delete the item?</p>
+    <a href="#" id="del-btn" data-role="button">Delete</a>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
