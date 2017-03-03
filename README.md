@@ -1,9 +1,10 @@
-eventManager Nov/19/2015, Tetsuya Chiba
+eventManager Mar/2/2017, Tetsuya Chiba
 ===============
 ###### installation (osx, linux) modify accordingly in case of windows.
 1. download eventManager.zip from <https://github.com/tetsuyac/eventManager.git>
 1. unzip eventManager.zip
 1. cd eventManager
+1. npm config set engine-strict true
 1. npm install
 1. mongo  (mongodb needs to be started already)
 1. \> exit
